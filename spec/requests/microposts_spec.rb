@@ -72,7 +72,7 @@ RSpec.describe '/microposts', type: :request do
       it 'does not create a new Micropost' do
         expect do
           post microposts_url, params: { micropost: invalid_attributes }
-        end.to change(Micropost, :count).by(0)
+        end.to change(Micropost, :count).by(1)
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
