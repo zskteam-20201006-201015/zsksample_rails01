@@ -16,6 +16,7 @@ RSpec.describe '/microposts', type: :request do
   # Micropost. As you add validations to Micropost, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) do
+<<<<<<< HEAD
     { content: 'test', user_id: '1' }
     # skip('Add a hash of attributes valid for your model')
   end
@@ -23,6 +24,13 @@ RSpec.describe '/microposts', type: :request do
   let(:invalid_attributes) do
     { content: '', user_id: '' }
     # skip('Add a hash of attributes invalid for your model')
+=======
+    skip('Add a hash of attributes valid for your model')
+  end
+
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
   end
 
   describe 'GET /index' do
@@ -74,7 +82,11 @@ RSpec.describe '/microposts', type: :request do
       it 'does not create a new Micropost' do
         expect do
           post microposts_url, params: { micropost: invalid_attributes }
+<<<<<<< HEAD
         end.to change(Micropost, :count).by(0)
+=======
+        end.to change(Micropost, :count).by(1)
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
       end
 
       it "renders a successful response (i.e. to display the 'new' template)" do
@@ -87,6 +99,7 @@ RSpec.describe '/microposts', type: :request do
   describe 'PATCH /update' do
     context 'with valid parameters' do
       let(:new_attributes) do
+<<<<<<< HEAD
         # skip('Add a hash of attributes valid for your model')
         { content: 'test_update' }
       end
@@ -98,6 +111,16 @@ RSpec.describe '/microposts', type: :request do
           micropost.reload
           # skip('Add assertions for updated state')
         end.to change(Micropost, :count).by(1)
+=======
+        skip('Add a hash of attributes valid for your model')
+      end
+
+      it 'updates the requested micropost' do
+        micropost = Micropost.create! valid_attributes
+        patch micropost_url(micropost), params: { micropost: new_attributes }
+        micropost.reload
+        skip('Add assertions for updated state')
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
       end
 
       it 'redirects to the micropost' do

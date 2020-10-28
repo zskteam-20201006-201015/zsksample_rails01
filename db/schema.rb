@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2020_10_19_112407) do
+=======
+ActiveRecord::Schema.define(version: 2020_10_26_104007) do
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +24,10 @@ ActiveRecord::Schema.define(version: 2020_10_19_112407) do
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+<<<<<<< HEAD
+=======
+    t.index ["user_id", "created_at"], name: "index_microposts_on_user_id_and_created_at"
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
   end
 
   create_table "users", force: :cascade do |t|

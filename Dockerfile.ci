@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
 FROM circleci/ruby:2.7.1-node-browsers
 
 USER root
@@ -20,4 +23,8 @@ RUN wget https://github.com/hadolint/hadolint/releases/download/${hadolint_versi
 # install heroku cli
 RUN wget https://cli-assets.heroku.com/heroku-linux-x64.tar.gz && \
     tar xf heroku-linux-x64.tar.gz -C /usr/local/lib && \
+<<<<<<< HEAD
     ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+=======
+    ln -s /usr/local/lib/heroku/bin/heroku /usr/local/bin/heroku
+>>>>>>> 9586a77f9da9fc4c54fc627604d5aa161f68d2db
