@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-# FROM circleci/ruby:2.7.1-node-browsers
-FROM postgres:11-alpine
-ENV LANG ja_JP.utf8
-
-=======
 FROM circleci/ruby:2.7.1-node-browsers
->>>>>>> c49f5849768201a53d7a93a3578c7bbc4cf96e27
-=======
-FROM circleci/ruby:2.7.1-node-browsers
->>>>>>> 83e628fe0334656940b3eeba99750702a729c4c1
 
 USER root
 
