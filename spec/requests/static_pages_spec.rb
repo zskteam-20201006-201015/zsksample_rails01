@@ -10,6 +10,7 @@ RSpec.describe 'StaticPages', type: :request do
 
     it 'micropost index including pagination link' do
       get microposts_url
+      assert_select 'div.pagination'
     end
     
     it 'user index including pagination link' do
