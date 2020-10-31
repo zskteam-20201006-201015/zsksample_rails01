@@ -8,6 +8,10 @@ RSpec.describe 'StaticPages', type: :request do
       expect(response.body).to include 'hello, world!'
     end
 
+    it 'micropost index including pagination link' do
+      get microposts_url
+      assert_select 'div.pagination'
+    end
     it 'user index including pagination link' do
       50.times do |n|
         name  = Faker::Name.name
